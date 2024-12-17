@@ -9,6 +9,10 @@ with sync_playwright() as p:
     # The `headless=False` argument makes the browser visible.
     browser = p.chromium.launch(headless=False)
 
+
+    # Step 4: Create a new browser context with maximized viewport.
+    context = browser.new_context(viewport=None)
+
     # Step 4: Create a new browser page (tab) instance.
     page = browser.new_page()
 
